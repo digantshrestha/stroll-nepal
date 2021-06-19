@@ -2,27 +2,53 @@
 
 namespace app\controller;
 use app\db\DBInterface;
+use app\db\MysqlDB;
+use app\db\PgsqlDB;
+use app\db\Config;
 
 class DBController{
-    private $db;
+    private $type;
 
-    public function __construct(DBInterface $db){
-        $this->db = $db;
+    public function __construct($type){
+        $this->type = $type;
     }
 
-    public function getData($query){
-        $conn = $this->db->connect('localhost', 'root', 'database1234', 'strolling');
-        $this->db->query($query);
-        $this->db->execute();
-        $result = $this->db->getResult();
-        $this->db->close();
-        return $result;
-        // $conn = new \Mysqli('localhost', 'root', 'database1234', 'strolling');
-        // $sql = 'show tables';
-        // $stmt = $conn->prepare($sql);
-        // $stmt->execute();
-        // $result = $stmt->get_result();
-        // return $result;
+    public function getData(){
+        // include_once('../db/config.php');
+        $config = new Config();
+        $arr = [];
+
+        if($this->type == 'pgsql'){
+            $db = new PgsqlDB();
+            $query = "SELECT * FROM pg_catalog.pg_tables WHERE schemaname != 'pg_catalog' AND schemaname != 'information_schema'";
+            $cred = $config->getPgsqlCredentials();
+            $conn = $db->connect($cred['host'], $cred['port'], $cred['user'], $cred['password'], $cred['database']);
+            $result = $db->query($query);
+            // $db->execute();
+            while($row = $db->getResult($result)){
+                array_push($arr, $row['tablename']);
+                // print_r($row['tablename']);
+            }
+            // die();
+            $db->close();
+            return $arr;
+        }
+        else if($this->type == 'mysql'){
+            $db = new MysqlDB();
+            $query = 'show tables';
+            $cred = $config->getMysqlCredentials();
+            $conn = $db->connect($cred['host'], $cred['port'], $cred['user'], $cred['password'], $cred['database']);
+            $result = $db->query($query);
+            $db->execute('', '');
+            $result = $db->getResult('');
+            while($row = $result->fetch_assoc()){
+                array_push($arr, $row['Tables_in_strolling']);
+                // print_r($row['Tables_in_strolling']);
+            }
+            // die();
+            $db->close();
+            return $arr;
+        }
         
     }
 }
