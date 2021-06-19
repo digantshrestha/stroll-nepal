@@ -7,7 +7,7 @@ spl_autoload_register(function($classname){
 use app\controller\DBController;
 
 
-$controller = new DBController('mysql');
+$controller = new DBController('pgsql');
 
 $result = $controller->getData();
 // print_r($result);
