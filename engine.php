@@ -13,7 +13,8 @@ $result = $controller->getData();
 // print_r($result);
 
 foreach($result as $r){
-    
+    echo $r;
+    echo "<br>";
 }
 
 ?>
