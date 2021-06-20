@@ -29,10 +29,10 @@ class DBController{
             // $db->execute();
             while($row = $db->getResult($result)){
                 // array_push($arr, $row['tablename']);
-                print_r($row['databasename']);
-                echo '<br>';
+                // print_r($row['databasename']);
+                // echo '<br>';
             }
-            die();
+            // die();
             $db->close();
             return $arr;
         }
