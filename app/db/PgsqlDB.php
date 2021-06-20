@@ -10,9 +10,7 @@ class PgsqlDB implements DBInterface{
         $port           = "port = 5432";
         $dbname         = "dbname = dfjh9no7ssbsji";
         $credentials    = "user = zytskhdptazbhi password = 617cf0da88c717176c1b4f29327de9d0ebd84d2c73c6ab7e87cb94d38a34ee28";
-
-        echo $host;
-        die();  
+        
         $this->conn = pg_connect("$host $port $dbname $credentials");
     }
 

@@ -10,6 +10,9 @@ use app\controller\DBController;
 
 $controller = new DBController('pgsql');
 
+print_r($controller);
+die();
+
 $result = $controller->getData();
 // print_r($result);
 
