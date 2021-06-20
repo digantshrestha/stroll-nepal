@@ -8,11 +8,10 @@ spl_autoload_register(function($classname){
 
 use app\controller\DBController;
 
+$controller = new DBController('pgsql');
+
 echo 'hello';
 die();
-
-
-$controller = new DBController('pgsql');
 
 $result = $controller->getData();
 // print_r($result);
