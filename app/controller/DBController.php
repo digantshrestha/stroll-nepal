@@ -17,6 +17,8 @@ class DBController{
         // include_once('../db/config.php');
         // $config = new Config();
         $arr = [];
+        echo $this->type;
+        die();
 
         if($this->type == 'pgsql'){
             $db = new PgsqlDB();
