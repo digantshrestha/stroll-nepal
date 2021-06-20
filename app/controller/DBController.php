@@ -21,8 +21,10 @@ class DBController{
         if($this->type == 'pgsql'){
             $db = new PgsqlDB();
             $query = "SELECT * FROM pg_catalog.pg_tables WHERE schemaname != 'pg_catalog' AND schemaname != 'information_schema'";
+            // $query = 's'
             $cred = $config->getPgsqlCredentials();
-            $conn = $db->connect($cred['host'], $cred['port'], $cred['user'], $cred['password'], $cred['database']);
+            // $conn = $db->connect($cred['host'], $cred['port'], $cred['user'], $cred['password'], $cred['database']);
+            $conn = $db->connect();
             $result = $db->query($query);
             // $db->execute();
             while($row = $db->getResult($result)){

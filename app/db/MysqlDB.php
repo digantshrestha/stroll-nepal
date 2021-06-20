@@ -6,9 +6,9 @@ class MysqlDB implements DBInterface{
     private $conn;
     private $stmt;
 
-    public function connect($host, $port, $user, $password, $dbname){
-        $this->conn = new \Mysqli($host, $user, $password, $dbname);
-        return $this->conn;
+    public function connect(){
+        // $this->conn = new \Mysqli($host, $user, $password, $dbname);
+        return $this->conn='';
     }
 
     public function query($sql){

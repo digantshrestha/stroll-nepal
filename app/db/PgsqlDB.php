@@ -6,7 +6,7 @@ class PgsqlDB implements DBInterface{
     private $conn;
     private $stmt;
 
-    public function connect($host, $port, $user, $password, $dbname){
+    public function connect(){
         $host           = "host = ec2-34-232-191-133.compute-1.amazonaws.com";
         $port           = "port = 5432";
         $dbname         = "dbname = dfjh9no7ssbsji";
