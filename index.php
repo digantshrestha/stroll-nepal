@@ -6,6 +6,8 @@ spl_autoload_register(function($classname){
     include_once($classname.".php");
 });
 
+echo 'working till here';
+die();
 use app\controller\DBController;
 
 
