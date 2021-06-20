@@ -15,14 +15,14 @@ class DBController{
 
     public function getData(){
         // include_once('../db/config.php');
-        $config = new Config();
+        // $config = new Config();
         $arr = [];
 
         if($this->type == 'pgsql'){
             $db = new PgsqlDB();
             $query = "SELECT * FROM pg_catalog.pg_tables WHERE schemaname != 'pg_catalog' AND schemaname != 'information_schema'";
             // $query = 's'
-            $cred = $config->getPgsqlCredentials();
+            // $cred = $config->getPgsqlCredentials();
             // $conn = $db->connect($cred['host'], $cred['port'], $cred['user'], $cred['password'], $cred['database']);
             $conn = $db->connect();
             $result = $db->query($query);
@@ -38,7 +38,7 @@ class DBController{
         else if($this->type == 'mysql'){
             $db = new MysqlDB();
             $query = 'show tables';
-            $cred = $config->getMysqlCredentials();
+            // $cred = $config->getMysqlCredentials();
             $conn = $db->connect($cred['host'], $cred['port'], $cred['user'], $cred['password'], $cred['database']);
             $result = $db->query($query);
             $db->execute('', '');
