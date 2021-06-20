@@ -11,8 +11,6 @@ class DBController{
 
     public function __construct($type){
         $this->type = $type;
-        echo $this->type;
-        die();
     }
 
     public function getData(){
