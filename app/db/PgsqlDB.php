@@ -13,6 +13,9 @@ class PgsqlDB implements DBInterface{
         $credentials    = "user = zytskhdptazbhi password = 617cf0da88c717176c1b4f29327de9d0ebd84d2c73c6ab7e87cb94d38a34ee28";
 
         $this->conn = pg_connect("$host $port $dbname $credentials");
+
+        echo $this->conn;
+        die();
     }
 
     public function query($sql){
