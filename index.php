@@ -15,7 +15,7 @@ $result = $controller->getData();
 // print_r($result);
 
 foreach($result as $r){
-    echo $r;
+    echo "<h1>hello ".$r."</h1>";
     echo "<br>";
 }
 
