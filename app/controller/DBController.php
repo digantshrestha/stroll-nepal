@@ -11,14 +11,14 @@ class DBController{
 
     public function __construct($type){
         $this->type = $type;
+        echo $this->type;
+        die();
     }
 
     public function getData(){
         // include_once('../db/config.php');
         // $config = new Config();
         $arr = [];
-        echo $this->type;
-        die();
 
         if($this->type == 'pgsql'){
             $db = new PgsqlDB();
