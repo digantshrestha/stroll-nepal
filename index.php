@@ -28,7 +28,13 @@
 
         $db = pg_connect("$host $port $dbname $credentials");
 
-        print_r($db);
+        $query = "SELECT * FROM pg_catalog.pg_tables WHERE schemaname != 'pg_catalog' AND schemaname != 'information_schema'";
+        $result = pg_query($db, $query);
+        while($row = pg_fetch_assoc($result)){
+            print_r($row['tablename']);
+            echo '<br>';
+        }
+
 
 
 
