@@ -7,8 +7,8 @@ class MysqlDB implements DBInterface{
     private $stmt;
 
     public function connect(){
-        // $this->conn = new \Mysqli($host, $user, $password, $dbname);
-        return $this->conn='';
+        $this->conn = new \Mysqli('localhost', 'root', 'database1234', 'strolling');
+        return $this->conn;
     }
 
     public function query($sql){

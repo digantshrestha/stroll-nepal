@@ -2,7 +2,7 @@
 
 namespace [NAMESPACE];
 
-class [CLASS_NAME]{
+class [CLASSNAME]{
     
     [PRIVATE_VARIABLES]
 
