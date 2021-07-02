@@ -10,7 +10,6 @@ class Place{
 	protected $place_long;
 	protected $place_ratings;
 	protected $place_details;
-	protected $place_todos;
 	protected $place_tips;
 	protected $added_date;
 	protected $modified_date;
@@ -37,9 +36,6 @@ class Place{
 	}
 	public function getPlaceDetails(){
             return $this->place_details;
-	}
-	public function getPlaceTodos(){
-            return $this->place_todos;
 	}
 	public function getPlaceTips(){
             return $this->place_tips;
@@ -75,9 +71,6 @@ class Place{
 	}
 	public function setPlaceDetails($place_details){
             return $this->place_details;
-	}
-	public function setPlaceTodos($place_todos){
-            return $this->place_todos;
 	}
 	public function setPlaceTips($place_tips){
             return $this->place_tips;
