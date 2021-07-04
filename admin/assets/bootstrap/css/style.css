@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Festive&family=Ubuntu&display=swap');
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.brand{
+    font-family: 'Festive', cursive;
+}
+
+.brand a{
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.brand a:hover{
+    text-decoration: none;
+    /* font-weight: bold; */
+}
+
+.sidebar{
+    position: sitcky;
+    /* top: 0; */
+    /* bottom: 0; */
+    /* left: 0; */
+    /* z-index: 100; */
+    /* padding: 48px 0 0; */
+    /* box-shadow: inset -1px 0 0 rgb(0 0 0 / 10%); */
+
+}
+
+@media (min-width: 768px) {
+    .d-md-block {
+        display: block!important;
+    }
+}
+
+.sidebar a{
+    color: rgb(109, 108, 108);
+}
+ 
+.navbar{
+    padding:10px!important;
+} 
+
+.bg-light {
+    background-color: #f8f9fa!important;
+}
+
+.active{
+    background-color: #dc3545;
+}

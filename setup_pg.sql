@@ -51,4 +51,17 @@
 -- 'zytskhdptazbhi', '617cf0da88c717176c1b4f29327de9d0ebd84d2c73c6ab7e87cb94d38a34ee28', 
 -- 'dfjh9no7ssbsji', '5432');
 
+-- create table tbl_todos(id serial primary key, todo_activity varchar(50), 
+-- activity_category bigint, price varchar(20), duration varchar(10), 
+-- activity_info text, place_id bigint, added_date timestamp default CURRENT_TIMESTAMP,
+-- modified_date timestamp null, status boolean);
+
+-- alter table tbl_todos add foreign key(place_id) references tbl_place(id);
+
+-- create table tbl_todoActivities_Category(id serial primary key, category varchar(50),
+-- added_date timestamp default CURRENT_TIMESTAMP, modified_date timestamp null,
+-- status boolean);
+
+-- alter table tbl_todos add foreign key(activity_category) 
+-- references tbl_todoActivities_Category(id);
 
