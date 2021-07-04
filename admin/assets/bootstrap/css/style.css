@@ -19,7 +19,7 @@ body{
 }
 
 .sidebar{
-    position: sitcky;
+    /* position: sitcky; */
     /* top: 0; */
     /* bottom: 0; */
     /* left: 0; */
@@ -47,6 +47,14 @@ body{
     background-color: #f8f9fa!important;
 }
 
-.active{
+.active, .active a{
     background-color: #dc3545;
+    color:#fff;
+}
+
+.sidebar-sticky{
+    padding: 0.5rem!important;
+    position: fixed;
+    background-color: #f4f4f4;
+    margin-left: -15px;
 }

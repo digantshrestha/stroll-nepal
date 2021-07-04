@@ -1,3 +1,23 @@
+<?php
+  include_once($_SERVER['DOCUMENT_ROOT']."/helpers/inflector_helper.php");
+  $pageMarker = ['Dashboard', 'Places', 'Hotels', 'Restaurants', 
+                'Todos', 'Todo Categories', 'Users'];
+
+  $currentPage = strtolower($_SERVER['PHP_SELF']); 
+  
+  $title='';
+
+  foreach($pageMarker as $key){
+    $var = strtolower($key);
+    $var = str_replace(' ', '', $var);
+    if(strpos($currentPage, $var)!=0){
+      $title = $key;
+    }
+  }
+  
+  
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,12 +43,30 @@
     
     <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
       <div class="sidebar-sticky pt-3">
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">
-              Dashboard
-            </a>
-          </li>
+        <ul id="sidebar-nav" class="nav flex-column">
+          <?php foreach($pageMarker as $key):?>
+            <?php if(strpos($currentPage, str_replace(' ', '', strtolower($key)))!=0){?>
+                <li class="nav-item active">
+                  <a class="nav-link" href="<?=camelize(strtolower($key));?>.php">
+                  <?=$key;?>
+                  </a>
+                </li>
+              <?php
+              }
+              else{
+            ?>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="<?=camelize(strtolower($key));?>.php">
+                <?=$key; ?>
+              </a>
+            </li>
+          
+            <?php
+              }
+            ?>
+            
+          <?php endforeach; ?>
         </ul>
       </div>
     </nav>
