@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Festive&family=Ubuntu&display=swap');
 
+:root{
+    --footer_height: 12%;
+}
+
 body{
     font-family: 'Ubuntu', sans-serif;
 }
@@ -19,13 +23,12 @@ body{
 }
 
 .sidebar{
-    /* position: sitcky; */
-    /* top: 0; */
-    /* bottom: 0; */
-    /* left: 0; */
-    /* z-index: 100; */
-    /* padding: 48px 0 0; */
-    /* box-shadow: inset -1px 0 0 rgb(0 0 0 / 10%); */
+    height: 74%; /*Full-height: remove this if you want "auto" height*/
+    width: 13%; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    background-color: rgb(39, 39, 39); /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
 
 }
 
@@ -52,9 +55,19 @@ body{
     color:#fff;
 }
 
-.sidebar-sticky{
-    padding: 0.5rem!important;
+footer{
+    box-shadow:0 0 3rem rgba(0,0,0,.15);
+    padding:10px;
     position: fixed;
-    background-color: #f4f4f4;
-    margin-left: -15px;
+    bottom: 0%;
+    width: 100%;    
+}
+
+footer p{
+    margin:0;
+}
+
+.main{
+    margin-left: 15%;
+    margin-top: 10px;
 }
