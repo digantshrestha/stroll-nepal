@@ -4,11 +4,11 @@ namespace app\models;
 
 class Country{
     
-    protected $id;
-	protected $country_name;
-	protected $country_lat;
-	protected $country_long;
-	protected $country_status;
+    private $id;
+	private $country_name;
+	private $country_lat;
+	private $country_long;
+	private $country_status;
 	
 
     public function __construct(){}
@@ -31,19 +31,19 @@ class Country{
 	
 
     public function setId($id){
-            return $this->id;
+            $this->id=$id;
 	}
 	public function setCountryName($country_name){
-            return $this->country_name;
+            $this->country_name=$country_name;
 	}
 	public function setCountryLat($country_lat){
-            return $this->country_lat;
+            $this->country_lat=$country_lat;
 	}
 	public function setCountryLong($country_long){
-            return $this->country_long;
+            $this->country_long=$country_long;
 	}
 	public function setCountryStatus($country_status){
-            return $this->country_status;
+            $this->country_status=$country_status;
 	}
 	
 }

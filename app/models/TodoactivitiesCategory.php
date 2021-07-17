@@ -4,11 +4,11 @@ namespace app\models;
 
 class TodoactivitiesCategory{
     
-    protected $id;
-	protected $category;
-	protected $added_date;
-	protected $modified_date;
-	protected $status;
+    private $id;
+	private $category;
+	private $added_date;
+	private $modified_date;
+	private $status;
 	
 
     public function __construct(){}
@@ -31,19 +31,19 @@ class TodoactivitiesCategory{
 	
 
     public function setId($id){
-            return $this->id;
+            $this->id=$id;
 	}
 	public function setCategory($category){
-            return $this->category;
+            $this->category=$category;
 	}
 	public function setAddedDate($added_date){
-            return $this->added_date;
+            $this->added_date=$added_date;
 	}
 	public function setModifiedDate($modified_date){
-            return $this->modified_date;
+            $this->modified_date=$modified_date;
 	}
 	public function setStatus($status){
-            return $this->status;
+            $this->status=$status;
 	}
 	
 }

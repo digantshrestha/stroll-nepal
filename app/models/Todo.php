@@ -4,16 +4,16 @@ namespace app\models;
 
 class Todo{
     
-    protected $id;
-	protected $todo_activity;
-	protected $activity_category;
-	protected $price;
-	protected $duration;
-	protected $activity_info;
-	protected $place_id;
-	protected $added_date;
-	protected $modified_date;
-	protected $status;
+    private $id;
+	private $todo_activity;
+	private $activity_category;
+	private $price;
+	private $duration;
+	private $activity_info;
+	private $place_id;
+	private $added_date;
+	private $modified_date;
+	private $status;
 	
 
     public function __construct(){}
@@ -51,34 +51,34 @@ class Todo{
 	
 
     public function setId($id){
-            return $this->id;
+            $this->id=$id;
 	}
 	public function setTodoActivity($todo_activity){
-            return $this->todo_activity;
+            $this->todo_activity=$todo_activity;
 	}
 	public function setActivityCategory($activity_category){
-            return $this->activity_category;
+            $this->activity_category=$activity_category;
 	}
 	public function setPrice($price){
-            return $this->price;
+            $this->price=$price;
 	}
 	public function setDuration($duration){
-            return $this->duration;
+            $this->duration=$duration;
 	}
 	public function setActivityInfo($activity_info){
-            return $this->activity_info;
+            $this->activity_info=$activity_info;
 	}
 	public function setPlaceId($place_id){
-            return $this->place_id;
+            $this->place_id=$place_id;
 	}
 	public function setAddedDate($added_date){
-            return $this->added_date;
+            $this->added_date=$added_date;
 	}
 	public function setModifiedDate($modified_date){
-            return $this->modified_date;
+            $this->modified_date=$modified_date;
 	}
 	public function setStatus($status){
-            return $this->status;
+            $this->status=$status;
 	}
 	
 }

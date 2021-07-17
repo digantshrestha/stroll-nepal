@@ -4,16 +4,16 @@ namespace app\models;
 
 class Hotel{
     
-    protected $id;
-	protected $hotel_name;
-	protected $hotel_ratings;
-	protected $hotel_especiality;
-	protected $hotel_reviews;
-	protected $added_date;
-	protected $modified_date;
-	protected $per_night_exp;
-	protected $place_id;
-	protected $status;
+    private $id;
+	private $hotel_name;
+	private $hotel_ratings;
+	private $hotel_especiality;
+	private $hotel_reviews;
+	private $added_date;
+	private $modified_date;
+	private $per_night_exp;
+	private $place_id;
+	private $status;
 	
 
     public function __construct(){}
@@ -51,34 +51,34 @@ class Hotel{
 	
 
     public function setId($id){
-            return $this->id;
+            $this->id=$id;
 	}
 	public function setHotelName($hotel_name){
-            return $this->hotel_name;
+            $this->hotel_name=$hotel_name;
 	}
 	public function setHotelRatings($hotel_ratings){
-            return $this->hotel_ratings;
+            $this->hotel_ratings=$hotel_ratings;
 	}
 	public function setHotelEspeciality($hotel_especiality){
-            return $this->hotel_especiality;
+            $this->hotel_especiality=$hotel_especiality;
 	}
 	public function setHotelReviews($hotel_reviews){
-            return $this->hotel_reviews;
+            $this->hotel_reviews=$hotel_reviews;
 	}
 	public function setAddedDate($added_date){
-            return $this->added_date;
+            $this->added_date=$added_date;
 	}
 	public function setModifiedDate($modified_date){
-            return $this->modified_date;
+            $this->modified_date=$modified_date;
 	}
 	public function setPerNightExp($per_night_exp){
-            return $this->per_night_exp;
+            $this->per_night_exp=$per_night_exp;
 	}
 	public function setPlaceId($place_id){
-            return $this->place_id;
+            $this->place_id=$place_id;
 	}
 	public function setStatus($status){
-            return $this->status;
+            $this->status=$status;
 	}
 	
 }

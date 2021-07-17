@@ -54,7 +54,7 @@ function generateModel($modelPath){
         $setters = "";
     
         foreach($fields as $f){
-            $protectedVars .= "protected \$".$f.";\r\n\t";
+            $protectedVars .= "private \$".$f.";\r\n\t";
     
             $field = ucfirst(camelize($f));
             
@@ -62,7 +62,7 @@ function generateModel($modelPath){
             return \$this->".$f.";\r\n\t}\r\n\t";
     
             $setters .= "public function set".$field."(\$".$f."){
-            return \$this->".$f.";\r\n\t}\r\n\t";
+            \$this->".$f."=\$".$f.";\r\n\t}\r\n\t";
         }
     
         $content = str_replace('[PRIVATE_VARIABLES]', $protectedVars, $content);
@@ -74,5 +74,5 @@ function generateModel($modelPath){
     
 }
 
-// generateModel($modelPath);
+generateModel($modelPath);
 ?>

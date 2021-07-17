@@ -4,15 +4,15 @@ namespace app\models;
 
 class Image{
     
-    protected $id;
-	protected $img_name;
-	protected $img_path;
-	protected $details;
-	protected $user_id;
-	protected $added_date;
-	protected $modified_date;
-	protected $place_id;
-	protected $status;
+    private $id;
+	private $img_name;
+	private $img_path;
+	private $details;
+	private $user_id;
+	private $added_date;
+	private $modified_date;
+	private $place_id;
+	private $status;
 	
 
     public function __construct(){}
@@ -47,31 +47,31 @@ class Image{
 	
 
     public function setId($id){
-            return $this->id;
+            $this->id=$id;
 	}
 	public function setImgName($img_name){
-            return $this->img_name;
+            $this->img_name=$img_name;
 	}
 	public function setImgPath($img_path){
-            return $this->img_path;
+            $this->img_path=$img_path;
 	}
 	public function setDetails($details){
-            return $this->details;
+            $this->details=$details;
 	}
 	public function setUserId($user_id){
-            return $this->user_id;
+            $this->user_id=$user_id;
 	}
 	public function setAddedDate($added_date){
-            return $this->added_date;
+            $this->added_date=$added_date;
 	}
 	public function setModifiedDate($modified_date){
-            return $this->modified_date;
+            $this->modified_date=$modified_date;
 	}
 	public function setPlaceId($place_id){
-            return $this->place_id;
+            $this->place_id=$place_id;
 	}
 	public function setStatus($status){
-            return $this->status;
+            $this->status=$status;
 	}
 	
 }

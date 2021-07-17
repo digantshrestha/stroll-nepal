@@ -8,8 +8,17 @@ body{
     font-family: 'Ubuntu', sans-serif;
 }
 
+.navbar{
+    position: sticky;
+    top: 0px;
+    background-color: #fff;
+    padding:1%!important;
+    /* z-index: 5; */
+}
+
 .brand{
     font-family: 'Festive', cursive;
+    margin-bottom: 0;
 }
 
 .brand a{
@@ -42,9 +51,6 @@ body{
     color: rgb(109, 108, 108);
 }
  
-.navbar{
-    padding:10px!important;
-} 
 
 .bg-light {
     background-color: #f8f9fa!important;
@@ -57,10 +63,11 @@ body{
 
 footer{
     box-shadow:0 0 3rem rgba(0,0,0,.15);
-    padding:10px;
-    position: fixed;
-    bottom: 0%;
-    width: 100%;    
+    padding:15px;
+    bottom: 0; 
+    width: 100%; 
+    overflow: hidden;  
+    background-color: #fff; 
 }
 
 footer p{
@@ -69,5 +76,10 @@ footer p{
 
 .main{
     margin-left: 15%;
+    margin-right: 10px;
     margin-top: 10px;
+    overflow: hidden;
+    /* position: relative; */
+    /* min-height: 100vh; */
+    /* z-index: 1; */
 }

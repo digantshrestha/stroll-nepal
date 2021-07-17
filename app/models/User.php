@@ -4,20 +4,20 @@ namespace app\models;
 
 class User{
     
-    protected $id;
-	protected $first_name;
-	protected $last_name;
-	protected $email;
-	protected $username;
-	protected $password;
-	protected $address;
-	protected $description;
-	protected $profile_img;
-	protected $cover_img;
-	protected $added_date;
-	protected $modified_date;
-	protected $email_verified;
-	protected $status;
+    private $id;
+	private $first_name;
+	private $last_name;
+	private $email;
+	private $username;
+	private $password;
+	private $address;
+	private $description;
+	private $profile_img;
+	private $cover_img;
+	private $added_date;
+	private $modified_date;
+	private $email_verified;
+	private $status;
 	
 
     public function __construct(){}
@@ -67,46 +67,46 @@ class User{
 	
 
     public function setId($id){
-            return $this->id;
+            $this->id=$id;
 	}
 	public function setFirstName($first_name){
-            return $this->first_name;
+            $this->first_name=$first_name;
 	}
 	public function setLastName($last_name){
-            return $this->last_name;
+            $this->last_name=$last_name;
 	}
 	public function setEmail($email){
-            return $this->email;
+            $this->email=$email;
 	}
 	public function setUsername($username){
-            return $this->username;
+            $this->username=$username;
 	}
 	public function setPassword($password){
-            return $this->password;
+            $this->password=$password;
 	}
 	public function setAddress($address){
-            return $this->address;
+            $this->address=$address;
 	}
 	public function setDescription($description){
-            return $this->description;
+            $this->description=$description;
 	}
 	public function setProfileImg($profile_img){
-            return $this->profile_img;
+            $this->profile_img=$profile_img;
 	}
 	public function setCoverImg($cover_img){
-            return $this->cover_img;
+            $this->cover_img=$cover_img;
 	}
 	public function setAddedDate($added_date){
-            return $this->added_date;
+            $this->added_date=$added_date;
 	}
 	public function setModifiedDate($modified_date){
-            return $this->modified_date;
+            $this->modified_date=$modified_date;
 	}
 	public function setEmailVerified($email_verified){
-            return $this->email_verified;
+            $this->email_verified=$email_verified;
 	}
 	public function setStatus($status){
-            return $this->status;
+            $this->status=$status;
 	}
 	
 }

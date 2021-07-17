@@ -4,17 +4,17 @@ namespace app\models;
 
 class Place{
     
-    protected $id;
-	protected $place_name;
-	protected $place_lat;
-	protected $place_long;
-	protected $place_ratings;
-	protected $place_details;
-	protected $place_tips;
-	protected $added_date;
-	protected $modified_date;
-	protected $status;
-	protected $country_id;
+    private $id;
+	private $place_name;
+	private $place_lat;
+	private $place_long;
+	private $place_ratings;
+	private $place_details;
+	private $place_tips;
+	private $added_date;
+	private $modified_date;
+	private $status;
+	private $country_id;
 	
 
     public function __construct(){}
@@ -55,37 +55,37 @@ class Place{
 	
 
     public function setId($id){
-            return $this->id;
+            $this->id=$id;
 	}
 	public function setPlaceName($place_name){
-            return $this->place_name;
+            $this->place_name=$place_name;
 	}
 	public function setPlaceLat($place_lat){
-            return $this->place_lat;
+            $this->place_lat=$place_lat;
 	}
 	public function setPlaceLong($place_long){
-            return $this->place_long;
+            $this->place_long=$place_long;
 	}
 	public function setPlaceRatings($place_ratings){
-            return $this->place_ratings;
+            $this->place_ratings=$place_ratings;
 	}
 	public function setPlaceDetails($place_details){
-            return $this->place_details;
+            $this->place_details=$place_details;
 	}
 	public function setPlaceTips($place_tips){
-            return $this->place_tips;
+            $this->place_tips=$place_tips;
 	}
 	public function setAddedDate($added_date){
-            return $this->added_date;
+            $this->added_date=$added_date;
 	}
 	public function setModifiedDate($modified_date){
-            return $this->modified_date;
+            $this->modified_date=$modified_date;
 	}
 	public function setStatus($status){
-            return $this->status;
+            $this->status=$status;
 	}
 	public function setCountryId($country_id){
-            return $this->country_id;
+            $this->country_id=$country_id;
 	}
 	
 }

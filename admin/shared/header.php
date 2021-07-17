@@ -32,15 +32,15 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div class="navbar navbar-dark sticky-top flex-md-nowrap p-0 shadow">
-        <div class="container">
-            <h1 class="nav-items brand"><a href="../../"><?=BRANDNAME;?></a></h1>  
+    <header class="header navbar shadow">
+        <!-- <div class="container"> -->
+            <h2 class="nav-items brand"><a href="../../"><?=BRANDNAME;?></a></h2>  
             <div class="nav-items">
                 <button class="btn btn-danger">Settings</button>
                 <button class="btn btn-danger">Logout</button>
             </div>
-        </div>        
-    </div>
+        <!-- </div>         -->
+    </header>
 
     
     <nav class="sidebar">

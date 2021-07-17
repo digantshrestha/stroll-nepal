@@ -70,3 +70,5 @@
 -- 'dfjh9no7ssbsji', '5432');
 
 
+insert into tbl_place(place_name, place_lat, place_long, place_ratings, place_details,
+place_tips) values('Kathmandu', 23, 45, 4.0, 'Capital', 'Safe');
