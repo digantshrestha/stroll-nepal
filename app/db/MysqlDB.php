@@ -16,7 +16,13 @@ class MysqlDB implements DBInterface{
         // return $this->stmt;
     }
 
-    public function execute($sql, $args){
+    public function execute($stmt, $arr){
+        $bindStatement = '';
+        $len = count($arr);
+        $s = str_repeat('s', $len);
+
+        $this->stmt->bind_param($s, ...$arr);
+
         $this->stmt->execute();
     }
 

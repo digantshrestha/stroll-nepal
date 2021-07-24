@@ -20,9 +20,10 @@
   if($_SERVER['REQUEST_METHOD']=='POST'){
     foreach($_POST as $key=>$val){
       if($fields[$key]!='Submit_Type'){
-        $fields[$key]=$val;
+        $fields[$key]=htmlspecialchars($val);
       }
     }
+
 
     $place = new Place();
 
@@ -33,9 +34,21 @@
     $place->setPlaceDetails($fields['Place_Details']);
     $place->setPlaceTips($fields['Place_Tips']);
 
-    $db = new DBMainController(new MysqlDB());
+    $arr =[
+          $place->getPlaceName($fields['Place_Name']), 
+          $place->getPlaceLat($fields['Latitude']), 
+          $place->getPlaceLong($fields['Longitude']), 
+          $place->getPlaceRatings($fields['Place_Ratings']), 
+          $place->getPlaceDetails($fields['Place_Details']),
+          $place->getPlaceTips($fields['Place_Tips'])
+        ];
+
+    $db = new DBMainController($REPO);
     
-    $db->add('place', $place);
+
+    $sql = 'insert into tbl_place(place_name, place_lat, place_long, place_ratings, 
+            place_details, place_tips) values (?, ?, ?, ?, ?, ?)';
+    $db->add($arr, $sql);
 
 
     

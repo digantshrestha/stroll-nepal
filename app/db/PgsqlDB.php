@@ -19,7 +19,8 @@ class PgsqlDB implements DBInterface{
     }
 
     public function execute($sql, $args){
-        // return $this->stmt->execute();
+        pg_prepare($this->conn, 'crud-query', $sql);
+        return pg_execute($this->conn, 'crud-query', $args);
     }
 
     public function getResult($result){
